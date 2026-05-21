@@ -5,6 +5,12 @@ const taskSchema = mongoose.Schema(
  type: String,
  required: [true, "Shto Ndonjë gjë"],
  },
+ user: {
+type: mongoose.Schema.Types.ObjectId,
+required: true,
+ref: 'User'
+
+ }
 },
  {
 timestamps: true,
