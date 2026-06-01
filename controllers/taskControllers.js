@@ -1,6 +1,9 @@
-const getTasks = (req, res) => {
- 		res.status(200).json({ message: 'Gjithe Deturatt' });
- 	}
+const  asyncHandler = require ('express=async-handler');
+
+
+const getTasks = asyncHandler(async (req, res) => {
+    res.status(200).json({ message: 'Gjithe Deturatt' });
+});
 
     const setTask = (req, res) => {
         if(!req.body  ||  !req.body.text) {
